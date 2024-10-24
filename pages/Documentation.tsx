@@ -17,7 +17,7 @@ const DocumentationNavBar = () => {
   return (
     <div>
       <ul>
-        <h3>Home</h3>
+        <h3>Hom</h3>
         <ul>
           <h3>Troubleshooting</h3>
           <li>
