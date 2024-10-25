@@ -30,3 +30,58 @@ a {
 .link {
   cursor: pointer;
 }
+
+
+.documentation-nav{
+  display: flex;
+  left: 0;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  transform: translateX(-80%);
+  transition: 0.5s linear ;
+
+}
+
+.nav-container{
+  background-color: #262a2c;
+  padding: 10px;
+  overflow-y: auto ;
+  max-height: 100vh;
+
+  width: 80%;
+}
+.toggle-container{
+  width: 20%;
+  display: flex;
+  align-items: center;
+
+}
+
+.nav-toggler {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: left 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.documentation-nav:has(.nav-toggler:checked) {
+  transform: translateX(0%);
+}
+
+.nav-toggler::before {
+  content: "\2630";
+  font-size: 24px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
